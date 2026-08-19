@@ -1,14 +1,15 @@
 const banner = document.querySelector('.banner');
 
-banner.addEventListener('mousemove', function(event) {
+console.log('JavaScript funcionando!');
 
+banner.addEventListener('mousemove', function(e) {
     const rect = banner.getBoundingClientRect();
 
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-    banner.style.setProperty('--x', `${x}px`);
-    banner.style.setProperty('--y', `${y}px`);
+    banner.style.setProperty('--x', x + 'px');
+    banner.style.setProperty('--y', y + 'px');
 
     banner.classList.add('active');
 });
